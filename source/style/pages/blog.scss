@@ -1,0 +1,120 @@
+.blog_triangle {
+  position: absolute;
+  bottom: 0;
+  z-index: 30;
+  height: 20vh;
+  width: 100%;
+}
+#blog_triangle_{
+  &left{
+    fill: #fff;
+  }
+  &right{
+    fill: #fff;
+  }
+}
+.blog-container{
+  min-height: rem(1200px);
+  background: #fff;
+  overflow: auto;
+  position: relative;
+  padding-bottom: $footer;
+  @include ipad {
+    padding-bottom: $footer;
+  }
+  @include iphone {
+    padding-bottom: $footer*1.5;
+  }
+}
+.blog-menu{
+  width: 27%;
+  position: absolute;
+  overflow: hidden;
+  margin-top: rem(60px);
+  left: 50px;
+  @include iphone {
+    display: none;
+  }
+  @include ipad {
+    display: none;
+  }
+  &-elem {
+    position: relative;
+    min-height: rem(40px);
+    margin-bottom: 15px;
+    margin-right: 3px;
+  }
+  &-elem-inner {
+    text-align: right;
+    font-weight: $regular;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 10px;
+    @include ipad {
+      display: none;
+    }
+    @include iphone {
+      display: none;
+    }
+  }
+}
+.blog{
+  &-article-header {
+    font-size: rem(35px);
+    font-family: $bernier;
+    margin: rem(40px) 0 rem(20px) 0;
+  }
+  &-article-date {
+    color: $green;
+  }
+  &-content{
+    width: 68%;
+    float: right;
+    padding: 0 260px 0 0;
+    @include ipad {
+      width: 100%;
+      float: none;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    @include iphone {
+      width: 100%;
+      float: none;
+      padding-left: 12px;
+      margin: auto;
+      font-size: 15px;
+      padding-bottom: $footer*1.6;
+    }
+  }
+  &-article{
+    width: 90%;
+    float: right;
+    border-bottom: 5px solid #f1f1f2;
+    padding-bottom: rem(60px);
+    color: #455a64;
+    &:last-child {
+      border-bottom: none;
+    }
+    @include ipad {
+      width: 100%;
+    }
+    @include iphone {
+      width: 95%;
+    }
+  }
+  &-article-content{
+    margin-top: rem(25px);
+  }
+}
+.active{
+  border-right: 3px solid $green;
+  margin-right: 0px;
+  color: $green;
+}
+.fixed {
+  position: fixed;
+  top: 20px;
+  left: 50px;
+}

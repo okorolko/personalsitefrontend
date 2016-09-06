@@ -1,0 +1,44 @@
+$green: #00bfa5;
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 800;
+$bernier: 'bernier';
+$berni-dis: 'bernier_dis';
+$berni-sha: 'bernier_sha';
+$footer: 148px;
+
+@font-face {
+    font-family: 'bernier_dis';
+    src: url('/assets/fonts/bernierdistressed-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/bernierdistressed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bernier';
+    src: url('/assets/fonts/bernierregular-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/bernierregular-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bernier_sha';
+    src: url('/assets/fonts/berniershade-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/berniershade-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import 'common/mixins.scss';
+@import 'common/basicSetup.scss';
+@import 'common/main.scss';
+@import 'pages/works.scss';
+@import 'pages/blog.scss';
+@import 'common/header.scss';
+@import 'pages/index.scss';
+@import 'pages/about.scss';
+@import 'common/footer.scss';
+@import 'pages/admin1.scss';
+

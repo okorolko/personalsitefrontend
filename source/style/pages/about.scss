@@ -1,0 +1,255 @@
+.about_triangle {
+  position: absolute;
+  bottom: 0;
+  z-index: 30;
+  height: 20vh;
+  width: 100%;
+}
+#about_triangle_{
+  &left{
+    fill: #efeee9;
+  }
+  &right{
+    fill: #eeebdf;
+    @include iphone {
+      fill: #efeee9;
+    }
+    @include ipad {
+      fill: #efeee9;
+    }
+  }
+}
+.aboutme {
+  position: relative;
+  @include clearfix;
+    &-section {
+      width: 50%;
+        float: left;
+        text-align: center;
+        background: #efeee9;
+        padding-bottom: 50px;
+    @include iphone {
+      width: 100%;
+      padding-bottom: 10px;
+    }
+      @include ipad {
+        width: 100%;
+      }
+    }
+    &-header {
+        font-family: $bernier;
+        font-size: rem(63px);
+        color: #373e42;
+        margin-top: 0;
+        &_who_text{
+          width: rem(440px);
+          margin: auto;
+          @include iphone {
+            width: 90%;
+            text-align: justify;
+          }
+        }
+        @include ipad {
+          margin-top: rem(30px);
+        }
+        @include iphone {
+          margin: 0;
+          padding: 15px 0;
+        }
+    }
+    &-image {
+        width: rem(440px);
+        height: rem(300px);
+        @include iphone {
+          width: 100%;
+        }
+    }
+    &-header-who {
+        font-family: $bernier;
+        font-size: rem(35px);
+        color: #455a64;
+    }
+    &-text {
+        color: #455a64;
+    }
+}
+.graphs {
+    &-section {
+      width: 50%;
+      float: left;
+      text-align: center;
+      min-height: 800px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background: #eeebdf;
+        @include iphone {
+          width: 100%;
+          height:auto;
+        }
+      @include ipad {
+        width: 100%;
+        padding-bottom: rem(50px);
+        position: static;
+        //height: 100vh;
+      }
+    }
+    &-header {
+        font-family: $bernier;
+        font-size: rem(35px);
+        color: #455a64;
+        width: rem(250px);
+        margin: auto;
+        margin-bottom: rem(30px);
+        @include ipad {
+        margin-top: rem(50px);
+        }
+    }
+    &-text {
+        color: #455a64;
+        @include ipad {
+        width: 75%;
+        margin: auto;
+        }
+      @include iphone {
+        width: 90%;
+        text-align: justify;
+      }
+    }
+}
+.skills {
+  &-section{
+  }
+    &__name {
+        font-size: 28px;
+        font-weight: $medium;
+        text-align: left;
+        color: #455a64;
+        margin-top: rem(15px);
+        margin-left: rem(30px);
+      @include iphone {
+        margin-left: 0;
+      }
+        @include ipad {
+        text-align: center;
+        }
+    }
+    &__elems {
+        position: relative;
+        text-align: left;
+      @include iphone {
+        padding-top: 15px;
+      }
+        @include ipad {
+        text-align: center;
+        }
+    }
+    &__elems_one {
+        width: 110px;
+        height: 110px;
+        position: relative;
+        display: inline-block;
+        //margin-top: rem(20px);
+        margin: rem(15px);
+        @include iphone {
+          margin: 10px 10px;
+        }
+    }
+    &__elems_one_text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $green;
+        font-weight: $medium;
+        font-size: rem(13px);
+        text-align: center;
+      @include iphone {
+        font-size: 12px;
+      }
+    }
+}
+.g-circles {
+    fill: none;
+    stroke-width: 20;
+}
+.sector {
+    stroke-dasharray: 0 280;
+    // stroke-dashoffset: 270;
+    transition: all 1.5s;
+    stroke: $green;
+}
+.map__container{
+  position: relative;
+}
+.contacts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  width: rem(382px);
+  background: #fff;
+  opacity: .9;
+  margin: auto;
+  text-align: center;
+  padding-top: rem(5px);
+  padding-bottom: rem(5px);
+  @include iphone {
+  padding: 0;
+  top: 13%;
+  left: 0;
+  transform: translateX(0);
+  width: 100%;
+  //height: 47%;
+  }
+}
+.contacts__header {
+font-family: $bernier;
+font-size: rem(35px);
+color: #373e42;
+}
+.contacts__elems {
+  width: rem(302px);
+  margin: auto;
+  font-weight: $medium;
+  margin-top: rem(20px);
+}
+.contacts__elems_item{
+  text-align: left;
+  margin-bottom: 25px;
+}
+.contacts__elem_icon {
+  height: 24px;
+  width: 24px;
+}
+.contacts__elem_span {
+  margin-left: 12px;
+  line-height: 20px;
+  vertical-align: top;
+  color: #657981;
+}
+#map {
+    height: 120vh;
+    width: 100%;
+    z-index: 0;
+  @include iphone{
+    height: 140vh;
+  }
+  @include ipad {
+    height: 100vh;
+  }
+}
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4,
+.gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: $green;
+}

@@ -1,0 +1,28 @@
+@function rem($num) {
+  @return ($num / 16px) + 0rem;
+}
+
+
+@mixin iphone {
+	@media screen and (max-width: 420px) {
+		@content;
+	}
+}
+@mixin ipad {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin laptop {
+	@media screen and (max-width: 992px) {
+		@content;
+	}
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

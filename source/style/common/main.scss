@@ -1,0 +1,185 @@
+.first-screen{
+  height: 102vh;
+  position: relative;
+  margin-bottom: -2px;
+}
+.parallax-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.parallax-scroll__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  @include iphone {
+    left: -90%;
+    width: 200%;
+  }
+}
+.parallax-scroll__layer-img{
+  width: 100%;
+  height: 100%;
+  @include ipad {
+    width: 180%;
+  }
+}
+.main {
+  margin: auto;
+  text-align: center;
+  margin-bottom: rem(200px);
+  position: relative;
+}
+.avatar{
+  display: inline-block;
+  margin: auto;
+  margin-top: rem(135px);
+  width: rem(141px);
+  height: rem(141px);
+  border-radius: 50% 50%;
+  overflow: hidden;
+  @include ipad {
+    width: 220px;
+    height: 220px;
+  }
+  @include iphone {
+    width: 45%;
+    height: auto;
+  }
+}
+.ava-image{
+  width: 100%;
+}
+.name{
+  color: #fff;
+  @include iphone {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 23px;
+  }
+}
+.text{
+  color: #fff;
+  @include iphone {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+}
+.arrow-down{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+  z-index: 50;
+}
+.arrow-down-icon{
+  width: rem(25.18px);
+  height: rem(16.164px);
+  @include ipad {
+    width: 25px;
+    height: 25px;
+  }
+}
+.preloader {
+  &_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $green;
+    z-index: 999;
+    height: 100vh;
+  }
+  &_text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.3rem;
+  }
+}
+
+.preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+.outer-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid $green;
+  border-right-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  animation: turning-outer 2s infinite;
+  opacity: 0.9;
+}
+.middle-circle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border: 3px solid $green;
+  border-right-color: #fff;
+  width: 170px;
+  height: 170px;
+  border-radius: 170px;
+  animation: turning-middle 2s infinite;
+  opacity: 0.9;
+}
+.inner-circle {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 3px solid $green;
+  border-right-color: #fff;
+  width: 140px;
+  height: 140px;
+  border-radius: 140px;
+  animation: turning-inner 2s infinite;
+  opacity: 0.9;
+}
+@keyframes turning-outer {
+  0% {
+    transform: rotate(0deg);
+  }
+  29% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes turning-middle {
+  0% {
+    transform: rotate(0deg);
+  }
+  16% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes turning-inner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

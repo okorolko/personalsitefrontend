@@ -1,0 +1,254 @@
+.admin-wrapper {
+  background: url('../img/admin_bg.jpg') no-repeat;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #5f6568;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, .7);
+}
+
+.modal {
+  &-container {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  &-block {
+    width: 280px;
+    height: 110px;
+    background: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 20px;
+  }
+  &-block-text {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
+.admin_header {
+  height: 80px;
+  background: $green;
+  position: relative;
+  &_text {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 20px;
+    line-height: 80px;
+    font-weight: $light;
+    display: inline-block;
+  }
+  &_return {
+    display: inline-block;
+    position: absolute;
+    right: 33px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    opacity: .6;
+    font-size: .85rem;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.tabs__control {
+  height: 60px;
+  background: #f0efe9;
+  color: #67787f;
+  &-list {
+    height: 100%;
+    //display: inline-block;
+    display: table;
+  }
+  &-item {
+    display: inline-block;
+    word-spacing: normal;
+    width: 180px;
+    height: 100%;
+    position: relative;
+    font-size: 0;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    cursor: pointer;
+    &:nth-child(2) {
+      border: 0;
+    }
+  }
+  &-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+  }
+}
+
+.tabs__list {
+  color: #455a64q;
+  // background: rgba(255, 255, 255, 0.7);
+  &-container {
+    padding-left: 30px;
+    width: 490px;
+    @include clearfix;
+  }
+  &-item {
+    display: none;
+  }
+  &_block {
+    width: 200px;
+    margin-top: 10px;
+    @include clearfix;
+  }
+  &-top {
+    @include clearfix;
+  }
+  &_block-right {
+    float: right;
+  }
+  &_block-left {
+    float: left;
+  }
+  &_block-elem {
+    margin-top: 10px;
+    padding-left: 20px;
+    width: 100%;
+    @include clearfix;
+  }
+  &-input {
+    display: inline-block;
+    width: 40px;
+    margin-right: 10px;
+    float: right;
+    border: 0px;
+  }
+  &-percent {
+    display: inline-block;
+    float: right;
+  }
+}
+
+.activeTab {
+  display: block;
+}
+
+.activeTabLink {
+  color: $green;
+  background: #fff;
+}
+
+.blog {
+  &__name {
+    display: block;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    height: 34px;
+    width: 250px;
+    padding-left: 10px;
+  }
+  &__article {
+    margin-top: 15px;
+    width: 600px;
+    height: 24 0px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    display: block;
+    padding-left: 10px;
+  }
+}
+
+.admin_works {
+  &__text-field {
+    width: 300px;
+    height: 45px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+    display: block;
+    padding-left: 10px;
+
+  }
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  max-width: 80%;
+  font-size: 1rem;
+  font-weight: 400;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 0.1rem;
+}
+
+.no-js .inputfile + label {
+  display: none;
+}
+
+.inputfile-4 + label {
+  color: $green;
+}
+
+.inputfile-4 + label figure {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #d3394c;
+  display: block;
+  padding: 20px;
+  margin: 0 auto 10px;
+}
+
+.admin-button {
+  background-color: $green;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid $green;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  padding: 16px 27px;
+  text-decoration: none;
+  margin-top: 30px;
+}
+
+#addWork {
+  position: absolute;
+  bottom: 50px;
+  left: 30px;
+}
+
+.modalOk {
+  padding: 7px 18px 11px;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
