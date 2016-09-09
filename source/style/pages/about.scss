@@ -58,10 +58,11 @@
         }
     }
     &-image {
-        width: rem(440px);
-        height: rem(300px);
+        width: rem(400px);
+        height: rem(340px);
         @include iphone {
-          width: 100%;
+          width: 95%;
+          height:auto;
         }
     }
     &-header-who {
